@@ -15,3 +15,9 @@ Once you see the Login page use the following hardcoded details:
 
 Username: test
 Password: test
+
+Login Page:
+![Alt text](image.png)
+
+Dashboard with Logout Button:
+![Alt text](image-1.png)
