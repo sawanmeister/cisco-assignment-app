@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Dashboard = () => {
+const Dashboard = ({ onLogout }) => {
   const [shows, setShows] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,15 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard bg-gray-100 p-4">
-      <h1 className="text-xl font-bold mb-4">TV Shows</h1>
+      <div className="flex justify-between items-center">
+        <h1 className="text-xl font-bold">TV Shows</h1>
+        <button
+          onClick={onLogout}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Logout
+        </button>
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4">
         {shows.map((item) => (
           <div key={item.show.id} className="bg-white rounded-lg shadow-lg p-4">
