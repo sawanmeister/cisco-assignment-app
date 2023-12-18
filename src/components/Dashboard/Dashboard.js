@@ -30,15 +30,15 @@ const Dashboard = ({ onLogout }) => {
           Logout
         </button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {shows.map((item) => (
           <div key={item.show.id} className="bg-white rounded-lg shadow-lg p-4">
             <h2 className="text-lg font-bold">{item.show.name}</h2>
             <img
               src={
                 item.show.image
-                  ? item.show.image.medium
-                  : "https://via.placeholder.com/210x295"
+                  ? item.show.image.original
+                  : "https://via.placeholder.com/300x450"
               }
               alt={item.show.name}
               className="rounded mb-2"
